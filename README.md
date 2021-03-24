@@ -19,3 +19,6 @@ La cámara mira constantemente al enemigo, alrededor del pecho, como en un juego
 Además, he alterado valores de "damping" para que el seguimiento tarde ligeramente en ajustar la cámara según se mueve el jugador.
 
 Por último, he empleado el Cinemachine Impulse para simular un camera shake, el cual se manifiesta al atacar. 
+
+Creo que el resultado es cercano a las propuestas de juegos de boxeo o lucha, aunque cabe tener en cuenta que el enemigo no tiene
+comportamiento alguno, en cuyo caso podría atacar y habría un nuevo camera shake en todas direcciones, en caso de que te golpee. 
