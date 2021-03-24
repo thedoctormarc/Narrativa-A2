@@ -1,6 +1,6 @@
 # Narrativa-A2
 En este assignment he trabajado la opción de: 
-* Pruebas de sistemas de control de personajes y seguimiento de cámaras *
+* Pruebas de sistemas de control de personajes y seguimiento de cámaras 
 
 El personaje es un boxeador que se encuentra ante un enemigo inofensivo (dummy). 
 
