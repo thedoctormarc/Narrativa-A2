@@ -6,9 +6,9 @@ El personaje es un boxeador que se encuentra ante un enemigo inofensivo (dummy).
 
 Para el control del personaje, el esquema es el siguiente:
 
-WASD = move
-Q,E = dodge
-Left Mouse = attack
+WASD = move,
+Q,E = dodge,
+Left Mouse = attack,
 
 Cabe decir que para cada acción existe una animación correspondiente. 
 Dichas animaciones provienen de Mixamo. 
