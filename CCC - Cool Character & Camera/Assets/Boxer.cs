@@ -97,10 +97,10 @@ public class Boxer : MonoBehaviour
         }
 
         // Resolve Movement
-        Vector3 delta_fwd = Vector3.forward * movement.y * Time.deltaTime * moveSpeed;
+        Vector3 delta_fwd = transform.forward * movement.y * Time.deltaTime * moveSpeed;
         cc.Move(delta_fwd);
 
-        Vector3 delta_side = Vector3.right * movement.x * Time.deltaTime * moveSpeed;
+        Vector3 delta_side = transform.right * movement.x * Time.deltaTime * moveSpeed;
         cc.Move(delta_side);
 
         if (movement.magnitude > 0f)
