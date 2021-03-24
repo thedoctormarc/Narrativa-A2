@@ -10,8 +10,11 @@ WASD = move
 Q,E = dodge
 Left Mouse = attack
 
-Cabe decir que para cada acción existe una animación correspondiente. He decidido
-que no se pueda atacar o esquivar mientras se mueve.
+Cabe decir que para cada acción existe una animación correspondiente. 
+Dichas animaciones provienen de Mixamo. 
+
+He decidido que no se pueda atacar o esquivar mientras se mueve, pero que pueda moverse justo después de accionar un ataque 
+o una esquiva, para proporcionar capacidad de reposicionamiento.
 
 En cuanto a la cámara, he empleado el package de Cinemachine.
 
