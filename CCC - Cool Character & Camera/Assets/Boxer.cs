@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Boxer : MonoBehaviour
 {
@@ -23,12 +24,16 @@ public class Boxer : MonoBehaviour
 
     bool dodgeR, dodgeL;
 
+    // camera shake
+    CinemachineImpulseSource cineImpulse;
+
     void Start()
     {
         movement = new Vector2();
         movement = Vector2.zero;
         cc = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        cineImpulse = GetComponent<CinemachineImpulseSource>();
     }
 
     // Update is called once per frame
@@ -54,13 +59,14 @@ public class Boxer : MonoBehaviour
         punch = false;
         anim.SetBool("punch", false);
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if(anim.GetBool("idle"))
             {
                 punch = true;
                 anim.SetBool("idle", false);
                 anim.SetBool("punch", true);
+                cineImpulse.GenerateImpulse(Camera.main.transform.forward);
             }
      
         }
@@ -74,7 +80,7 @@ public class Boxer : MonoBehaviour
         anim.SetBool("dodge right", false);
 
 
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (anim.GetBool("idle"))
             {
@@ -85,7 +91,7 @@ public class Boxer : MonoBehaviour
 
         }
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (anim.GetBool("idle"))
             {
